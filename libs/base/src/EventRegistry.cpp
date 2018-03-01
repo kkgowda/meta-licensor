@@ -62,14 +62,14 @@ AuditEvent const * EventRegistry::getLastFailure() const {
 }
 
 bool EventRegistry::isGood() const {
-    bool isGood = true;
+    bool isGood1 = true;
     for (auto it = logs.begin(); it != logs.end(); ++it) {
         if (it->severity == SVRT_ERROR) {
-            isGood = false;
+            isGood1 = false;
             break;
         }
     }
-    return isGood;
+    return isGood1;
 }
 
 void EventRegistry::addError(EVENT_TYPE event) {
