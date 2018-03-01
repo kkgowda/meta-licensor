@@ -74,7 +74,7 @@ static FUNCTION_RETURN generate_default_pc_id(PcIdentifier * identifiers,
 			}
 		}
 end:
-		*num_identifiers = min(*num_identifiers, (unsigned int)(adapter_num * disk_num));
+		*num_identifiers = std::min(*num_identifiers, (unsigned int)(adapter_num * disk_num));
 		free(diskInfoPtr);
 		free(adapterInfoPtr);
 	}
